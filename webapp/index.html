@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f3f6f1" />
+    <title>Dom.VPN — тарифы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="store-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Dom.VPN">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span class="brand-copy"><strong>DOM<span>.</span>VPN</strong><small>PRIVATE NETWORK</small></span>
+        </a>
+        <span class="topbar-note"><span class="status-dot"></span> ТАРИФЫ И ПОДПИСКА</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow"><span>01</span> / ВЫБОР ПОДПИСКИ</p>
+        <h1 id="page-title">Ваш доступ.<br /><span>Ваш срок.</span></h1>
+        <p class="intro-copy">Выберите тариф Dom.VPN. Менеджер поможет с оплатой и подключением после заявки.</p>
+      </section>
+
+      <section class="plans-section" aria-label="Тарифы Dom.VPN">
+        <div class="section-heading">
+          <h2>Срок подписки</h2>
+          <span id="plan-count" class="plan-count">Загрузка тарифов</span>
+        </div>
+        <div id="plans" class="plans-grid" aria-live="polite"></div>
+        <p id="load-error" class="load-error" role="alert" hidden>Не получилось загрузить тарифы. Закройте магазин и откройте его снова.</p>
+      </section>
+
+      <section class="steps" aria-label="Порядок оформления">
+        <span class="steps-label">ПОСЛЕ ЗАЯВКИ</span>
+        <div class="steps-flow"><span>Заявка</span><i></i><span>Оплата</span><i></i><span>Подключение</span></div>
+      </section>
+
+      <footer class="checkout-bar">
+        <div class="checkout-copy">
+          <span class="checkout-label">ВЫБРАННЫЙ ТАРИФ</span>
+          <strong id="selection-title">Загрузка…</strong>
+          <small>Оплата и настройка — после связи с менеджером</small>
+        </div>
+        <button id="order-button" class="order-button" type="button" disabled>
+          <span>Заказать</span>
+          <span class="button-price" id="button-price">—</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5" /></svg>
+        </button>
+      </footer>
+      <p id="app-status" class="app-status" role="status" aria-live="polite"></p>
+    </main>
+  </body>
+</html>
